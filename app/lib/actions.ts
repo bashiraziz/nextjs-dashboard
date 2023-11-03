@@ -37,6 +37,7 @@ export async function updateInvoice(id: string, formData: FormData) {
       customerId: formData.get('customerId'),
       amount: formData.get('amount'),
       status: formData.get('status'),
+      id: formData.get('id'),
     });
    
     const amountInCents = amount * 100;
@@ -47,7 +48,7 @@ export async function updateInvoice(id: string, formData: FormData) {
       WHERE id = ${id}
     `;
    
-    revalidatePath('/dashboard/invoices');
+    // revalidatePath('/dashboard/invoices');
     redirect('/dashboard/invoices');
   }
   
