@@ -61,6 +61,7 @@ export default function EditInvoiceForm({
                 id="amount"
                 name="amount"
                 type="number"
+                step="0.01"
                 defaultValue={invoice.amount}
                 placeholder="Enter USD amount"
                 className="peer block w-full rounded-md border border-gray-200 py-2 pl-10 text-sm outline-2 placeholder:text-gray-500"
@@ -120,8 +121,9 @@ export default function EditInvoiceForm({
         >
           Cancel
         </Link>
-        <Button type="submit">Edit Invoice</Button>
+        <Button type="submit">Save Invoice</Button>
       </div>
     </form>
   );
+  
 }
