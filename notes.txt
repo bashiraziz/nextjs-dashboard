@@ -1,0 +1,4 @@
+There is a problem with the edit invoice function. When the edit pencil is clicked,
+the form data returned is from cache and not the most current data. 
+Console.log on the edit /app/invoices/edit page.tsx shows the cached data on the 
+terminal when the edit pencil is clicked. This old cache data is rendered. 
