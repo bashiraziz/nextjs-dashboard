@@ -34,7 +34,10 @@ export async function createInvoice(formData: FormData) {
 }
 
 export async function updateInvoice(id: string, formData: FormData) {
-  unstable_noStore();
+
+//throw new Error('Failed to Delete Invoice');
+
+  //unstable_noStore();
     const { customerId, amount, status } = UpdateInvoice.parse({
       customerId: formData.get('customerId'),
       amount: formData.get('amount'),
@@ -57,6 +60,9 @@ export async function updateInvoice(id: string, formData: FormData) {
   }
   
   export async function deleteInvoice(id: string) {
+   
+   // throw new Error('Failed to Delete Invoice');
+
     await sql`DELETE FROM invoices WHERE id = ${id}`;
     revalidatePath('/dashboard/invoices');
   }
