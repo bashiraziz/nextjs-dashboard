@@ -2,11 +2,11 @@ import AcmeLogo from '@/app/ui/acme-logo';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import { lusitana } from '@/app/ui/fonts';
 import Image from 'next/image'
-import { Metadata } from 'next';
+// import { Metadata } from 'next';
 
-export const metadata: Metadata = {
-  title: 'Dashboard',
-};
+// export const metadata: Metadata = {
+//   title: 'Dashboard',
+// };
 
 
 import Link from 'next/link';
